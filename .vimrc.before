@@ -1,0 +1,77 @@
+" Modeline and Notes {
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker nospell ts=2 sw=2 expandtab
+"
+" This is the personal .vimrc.before file of Luke Orland
+" some influence from the .vimrc file from Steve Francia.
+"
+
+" Environment {
+  " Reading/Writing {
+  set modeline                " Allow vim options to be embedded in files;
+  set modelines=5             " they must be within the first or last 5 lines.
+  " }
+" }
+
+" Key (re)mappings {
+  " The key represented by <leader>
+  let mapleader = ","             " change the leader to be a comma vs slash
+  " }
+" }
+
+" Vim UI - Sound / Display / View / Visual aspects {
+  " Custom Status Line
+
+  " fugitive
+  if janus#is_plugin_enabled('fugitive')
+    set statusline+=%{fugitive#statusline()}
+  endif
+
+  " Adding Syntastic warnings
+  if janus#is_plugin_enabled('syntastic')
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+  endif
+
+  " GVim GUI Settings (here instead of .gvimrc) {
+  if has('gui_running')
+
+    " GVim in any environment
+    set columns=999    " create windows with maximum width by default
+    set lines=999      " create windows with maximum height by default
+
+    set transparency=5          " Make the window slightly transparent
+    " Enable conceal (display math characters instead of tex latex math, except
+    " for the line being edited.
+    set cole=2
+    let g:tex_conceal= 'adgm'
+    hi Conceal guibg=White guifg=DarkMagenta
+    hi Conceal guifg=DarkMagenta
+
+    " GVim in Windows
+    if has('win32') || has('win64')
+      set guifont=DejaVu_Sans_Mono:h08:cDEFAULT
+      au GUIEnter * simalt ~x      " Start maximized
+
+    " MacVim in OS X
+    elseif has("gui_macvim")
+      set guifont=DejaVu\ Sans\ Mono:h14
+      set guioptions-=T            " remove the toolbar
+      set guioptions-=r            " remove the right scrollbar
+      set guioptions-=L            " remove the left scrollbar
+      "macmenu &Edit.Find.Find\.\.\. key=<nop> " free up Command-F
+      map <D-F> :set invfu<CR>                " toggle fullscreen mode
+      set fuopt+=maxhorz " grow to maximum horizontal width on entering
+                         " fullscreen mode
+    endif
+
+  " In the terminal
+  else
+    "colorscheme desert
+    "colorscheme pyte
+
+  " TODO: what is this?
+  "set term=builtin_ansi       " Make arrow and other keys work
+  endif
+  " }
+" }

@@ -1,0 +1,32 @@
+" Modeline and Notes {
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker nospell ts=2 sw=2 expandtab
+"
+" This is the personal .vimrc.after file of Luke Orland
+" Adding Git info with Fugitive
+
+
+
+" Key (re)mappings {
+  " Window navigation with ctrl key {
+  inoremap <C-h> <esc><C-w><C-h>
+  inoremap <C-j> <esc><C-w><C-j>
+  inoremap <C-k> <esc><C-w><C-k>
+  inoremap <C-l> <esc><C-w><C-l>
+  noremap <C-h> <C-w><C-h>
+  noremap <C-j> <C-w><C-j>
+  noremap <C-k> <C-w><C-k>
+  noremap <C-l> <C-w><C-l>
+  " Make these all work in insert mode too ( <C-O> makes next cmd
+  "  happen as if in command mode )
+  imap <C-w> <C-o><C-w>
+  " }
+" }
+
+" Autocompletion / OmniComplete - settings {
+  " Behaves like bash
+  set wildmenu
+  set wildmode=list:longest,full
+" }
+
+colorscheme solarized
+
