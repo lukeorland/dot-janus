@@ -1,0 +1,40 @@
+" Modeline and Notes {
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker nospell ts=2 sw=2 expandtab
+"
+" This is the personal .vimrc.before file of Luke Orland
+
+  " Vim UI - Sound / Display / View / Visual aspects {
+
+    " GVim in any environment
+    set columns=999    " create windows with maximum width by default
+    set lines=999      " create windows with maximum height by default
+
+    set transparency=0 " Make the window not transparent
+
+    " Enable conceal (display math characters instead of tex latex math, except
+    " for the line being edited.
+    set cole=2
+    let g:tex_conceal= 'adgm'
+    hi Conceal guibg=White guifg=DarkMagenta
+    hi Conceal guifg=DarkMagenta
+
+    " GVim in Windows
+    if has('win32') || has('win64')
+      set guifont=DejaVu_Sans_Mono:h08:cDEFAULT
+      au GUIEnter * simalt ~x      " Start maximized
+
+    " MacVim in OS X
+    elseif has("gui_macvim")
+      set guifont=DejaVu\ Sans\ Mono:h14
+      set guioptions-=T            " remove the toolbar
+      set guioptions-=r            " remove the right scrollbar
+      set guioptions-=L            " remove the left scrollbar
+      "macmenu &Edit.Find.Find\.\.\. key=<nop> " free up Command-F
+      map <D-F> :set invfu<CR>                " toggle fullscreen mode
+      set fuopt+=maxhorz " grow to maximum horizontal width on entering
+                         " fullscreen mode
+    endif
+
+  " }
+
+" }

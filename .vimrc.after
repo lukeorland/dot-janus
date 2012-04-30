@@ -4,29 +4,75 @@
 " This is the personal .vimrc.after file of Luke Orland
 " Adding Git info with Fugitive
 
+  " Environment {
 
+    " Reading/Writing {
+    set modeline                " Allow vim options to be embedded in files;
+    set modelines=5             " they must be within the first or last 5 lines.
+    " }
 
-" Key (re)mappings {
-  " Window navigation with ctrl key {
-  inoremap <C-h> <esc><C-w><C-h>
-  inoremap <C-j> <esc><C-w><C-j>
-  inoremap <C-k> <esc><C-w><C-k>
-  inoremap <C-l> <esc><C-w><C-l>
-  noremap <C-h> <C-w><C-h>
-  noremap <C-j> <C-w><C-j>
-  noremap <C-k> <C-w><C-k>
-  noremap <C-l> <C-w><C-l>
-  " Make these all work in insert mode too ( <C-O> makes next cmd
-  "  happen as if in command mode )
-  imap <C-w> <C-o><C-w>
   " }
+
+  " Key (re)mappings {
+
+    " Fix problem default mappings {
+      " Yank from the cursor to the end of the line, to be consistent with C and D.
+      nnoremap Y y$
+    " }
+
+    " Window navigation with ctrl key {
+      inoremap <C-h> <esc><C-w><C-h>
+      inoremap <C-j> <esc><C-w><C-j>
+      inoremap <C-k> <esc><C-w><C-k>
+      inoremap <C-l> <esc><C-w><C-l>
+      noremap <C-h> <C-w><C-h>
+      noremap <C-j> <C-w><C-j>
+      noremap <C-k> <C-w><C-k>
+      noremap <C-l> <C-w><C-l>
+      " Make these all work in insert mode too ( <C-O> makes next cmd
+      "  happen as if in command mode )
+      imap <C-w> <C-o><C-w>
+    " }
+
+    " Toggle numbers
+    nmap <leader>n :set nonu!<CR>
+
+    " Folding {
+
+      " Variable for ToggleFold()
+      au FileType * let b:folded = 1
+      map Z :call ToggleFold()<CR> 
+    " }
+  " }
+
+  " Plugin key-mappings {
+
+    " BufClose.vim key-mappings {
+      "nmap <leader>bd :BufClose<CR> " Close buffer without changing window layout.
+    " }
+
+    " NerdTree key-mappings {
+      map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+    " }
+
+    " Autocompletion / OmniComplete - settings {
+
+      " Behaves like bash
+      set wildmenu
+      set wildmode=list:longest,full
+
+    " }
+  " }
+
+  " Vim UI - Tools: search, grep, completion {
+
+    " Highlight searches, clear with spacebar
+    set hlsearch                " Highlight searches by default.
+    set highlight=l:Visual
+    nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+  " }
+
+  colorscheme solarized
+
 " }
-
-" Autocompletion / OmniComplete - settings {
-  " Behaves like bash
-  set wildmenu
-  set wildmode=list:longest,full
-" }
-
-colorscheme solarized
-
