@@ -9,7 +9,7 @@ Clone the repo (with --recursive to install submodules)
 create symlinks
 
     cd
-    ln -s ~/.janus/*vimrc.* .
+    ln -s ~/.janus/.*vimrc.* .
 
 See [this link][customization] for more about customization
 
