@@ -37,4 +37,12 @@
 
   " }
 
+  " Set the configurations before setting the colorscheme.
+  set background=light
+  set t_Co=256
+  let g:solarized_visibility="low"
+  let g:solarized_contrast  ="high"
+  let g:solarized_termcolors=256
+  colorscheme solarized
+
 " }
