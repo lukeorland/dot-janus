@@ -4,11 +4,10 @@ Install Janus from [the Janus repository][janus-repo]:
 
 Clone the repo (with --recursive to install submodules)
 
-    git clone git@github.com:pierroweb/dotjanus.git ~/.janus --recursive
+    git clone git@github.com:lukeorland/dot-janus.git ~/.janus --recursive
 
 create symlinks
 
-    cd
     ln -s ~/.janus/.*vimrc.* $HOME/
 
 See [this link][customization] for more about customization
