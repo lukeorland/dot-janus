@@ -1,6 +1,0 @@
-[submodule "vim-pandoc"]
-	path = vim-pandoc
-	url = https://github.com/vim-pandoc/vim-pandoc.git
-[submodule "increment.vim--Natter"]
-	path = increment.vim--Natter
-	url = git://github.com/vim-scripts/increment.vim--Natter.git
