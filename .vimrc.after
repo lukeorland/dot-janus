@@ -75,4 +75,19 @@
 
   colorscheme solarized
 
+  " Functions {
+
+  " Copied from http://www.vim.org/scripts/script.php?script_id=1494
+  function! ToggleFold()
+      if( b:folded == 0 )
+          exec "normal! zM"
+          let b:folded = 1
+      else 
+          exec "normal! zR"
+          let b:folded = 0
+      endif 
+  endfunction 
+
+  " }
+
 " }
