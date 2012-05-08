@@ -10,4 +10,5 @@ call vundle#rc()
 Bundle 'tsaleh/vim-align.git'
 Bundle 'increment.vim--Natter'
 Bundle 'vim-pandoc/vim-pandoc.git'
+Bundle 'AutoComplPop'
 filetype plugin indent on     " required!
