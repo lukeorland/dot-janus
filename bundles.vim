@@ -11,4 +11,5 @@ Bundle 'tsaleh/vim-align.git'
 Bundle 'increment.vim--Natter'
 Bundle 'vim-pandoc/vim-pandoc.git'
 Bundle 'AutoComplPop'
+Bundle 'Python-mode-klen'
 filetype plugin indent on     " required!
