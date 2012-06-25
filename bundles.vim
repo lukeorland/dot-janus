@@ -5,7 +5,8 @@ set rtp+=~/.janus/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
 " required!
-"Bundle 'gmarik/vundle'
+Bundle 'gmarik/vundle'
+
 " My Bundles here:
 Bundle 'tsaleh/vim-align.git'
 Bundle 'increment.vim--Natter'
@@ -14,6 +15,5 @@ Bundle 'AutoComplPop'
 
 " Python
 Bundle 'Python-mode-klen'
-Bundle 'increment.vim--Natter'
 
 filetype plugin indent on     " required!
