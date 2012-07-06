@@ -1,1 +1,1 @@
-hi link pythonComment Operator
+hi pythonComment ctermfg=magenta cterm=bold

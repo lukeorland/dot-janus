@@ -15,5 +15,6 @@ Bundle 'AutoComplPop'
 
 " Python
 Bundle 'Python-mode-klen'
+Bundle 'hynek/vim-python-pep8-indent'
 
 filetype plugin indent on     " required!
