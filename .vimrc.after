@@ -76,6 +76,7 @@
 
   " }
 
+  set background=dark
   colorscheme solarized
 
   " Functions {
@@ -85,11 +86,11 @@
       if( b:folded == 0 )
           exec "normal! zM"
           let b:folded = 1
-      else 
+      else
           exec "normal! zR"
           let b:folded = 0
-      endif 
-  endfunction 
+      endif
+  endfunction
 
   " }
 
