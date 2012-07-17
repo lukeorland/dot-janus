@@ -1,1 +1,1 @@
-hi pythonComment ctermfg=magenta cterm=bold
+hi pythonComment ctermfg=magenta cterm=bold guifg=magenta gui=italic
