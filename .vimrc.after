@@ -79,6 +79,8 @@
   set background=dark
   colorscheme solarized
 
+  set nonumber
+
   " Functions {
 
   " Copied from http://www.vim.org/scripts/script.php?script_id=1494
