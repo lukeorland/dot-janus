@@ -39,12 +39,13 @@
 
     " Toggle numbers
     nmap <leader>n :set nonu!<CR>
+    set nonumber
 
     " Folding {
 
       " Variable for ToggleFold()
       au FileType * let b:folded = 1
-      map Z :call ToggleFold()<CR> 
+      map Z :call ToggleFold()<CR>
     " }
   " }
 
