@@ -6,10 +6,7 @@
 
   " Environment {
 
-    " Reading/Writing {
-    set modeline                " Allow vim options to be embedded in files;
-    set modelines=5             " they must be within the first or last 5 lines.
-    " }
+    set paste
 
   " }
 
@@ -77,7 +74,7 @@
 
   " }
 
-  set background=dark
+  set background=light
   colorscheme solarized
 
   " Functions {
@@ -95,4 +92,5 @@
 
   " }
 
+  "nmap <leader>b :CtrlPBuffer<CR>
 " }

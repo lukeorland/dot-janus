@@ -5,7 +5,17 @@
 " some influence from the .vimrc file from Steve Francia.
 "
 
-  source ~/.janus/bundles.vim
+
+  " Environment {
+
+    source ~/.janus/bundles.vim
+
+    " Reading/Writing {
+    set modeline                " Allow vim options to be embedded in files;
+    set modelines=5             " they must be within the first or last 5 lines.
+    " }
+
+  " }
 
   " Key (re)mappings {
     " The key represented by <leader>
@@ -33,3 +43,4 @@
 
   " }
 " }
+"call janus#disable_plugin('buffergator')
