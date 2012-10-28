@@ -67,15 +67,23 @@
 
   " Vim UI - Tools: search, grep, completion {
 
+    " Default to hiding line numbers
+    set nonumber
+
     " Highlight searches, clear with spacebar
     set hlsearch                " Highlight searches by default.
     set highlight=l:Visual
     nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+    set paste
   " }
 
   set background=light
   colorscheme solarized
+
+  " Show unprintable characters hexadecimal as <xx> instead of using ^C
+  " and ~C.  
+  set display=uhex
 
   " Functions {
 
